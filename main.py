@@ -10,6 +10,7 @@ def send_msg():
         yag = yagmail.SMTP("astramailbot@gmail.com", "fgtujuffnsaqfycg")
         contents = [calc_res()]
         yag.send(
+            # add more receiptents
             ["ishaanbhimwal@gmail.com"], "[astra-mail-bot] Upcoming Event", contents
         )
     else:
@@ -22,6 +23,6 @@ keep_alive()
 
 while True:
     sched.add_job(
-        send_msg, timezone="Asia/Kolkata", trigger="cron", hour="22", minute="50"
+        send_msg, timezone="Asia/Kolkata", trigger="cron", hour="07", minute="30"
     )
     sched.start()

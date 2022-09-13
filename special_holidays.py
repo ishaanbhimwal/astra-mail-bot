@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 
 import pytz
 
+# use "special holidays" instead
 my_dict = {
     "September": {
         0: {"Name": "Saturday", "Day": "10-09"},
@@ -46,5 +47,6 @@ def calc_res():
         if month in my_dict:
             for i in my_dict[month]:
                 if date_month_advance == my_dict[month][i]["Day"]:
+                    # modify the format of the message
                     result = f"{my_dict[month][i]['Name']} is on {my_dict[month][i]['Day']}. Hurry up!\n\nTime right now - {datetime_india.strftime('%a %_d %b, %I:%M %p')}"
                     return result
