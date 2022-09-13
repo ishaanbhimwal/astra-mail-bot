@@ -23,6 +23,6 @@ keep_alive()
 
 while True:
     sched.add_job(
-        send_msg, timezone="Asia/Kolkata", trigger="cron", hour="07", minute="30"
+        send_msg, timezone="Asia/Kolkata", trigger="cron", hour="7", minute="30"
     )
     sched.start()
